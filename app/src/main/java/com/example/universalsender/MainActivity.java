@@ -31,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(MainActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show();
-                        if(item.getTitle().equals("SEND SMS")){
+                        String t = (String) item.getTitle();
+                        if(t.equals("SEND SMS")){
                             Intent i = new Intent(MainActivity.this, MainActivitySMS.class);
                             startActivity(i);
                         }
-                        else if(item.getTitle().equals("SEND MAIL")){
+                        else if(t.equals("SEND MAIL")){
                             Intent i = new Intent(MainActivity.this, MainActivityMAIL.class);
                             startActivity(i);
                         }
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
 
-//                popup.show();
+                popup.show();
             }
         });
     }

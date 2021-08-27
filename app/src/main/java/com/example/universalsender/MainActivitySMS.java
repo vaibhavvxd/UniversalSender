@@ -1,6 +1,6 @@
 package com.example.universalsender;
 
-import androidx.appcompat.app.AppCompatActivity;
+import  androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
@@ -20,7 +20,7 @@ public class MainActivitySMS extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_sms);
         ActivityCompat.requestPermissions(MainActivitySMS.this,new String[]{Manifest.permission.SEND_SMS,Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
         buttonSend = (Button)findViewById(R.id.buttonSend);
         textPhoneNo = (EditText)findViewById(R.id.editTextPhoneNo);
